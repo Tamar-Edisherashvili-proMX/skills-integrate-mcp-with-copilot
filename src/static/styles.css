@@ -16,6 +16,7 @@ body {
 }
 
 header {
+  position: relative;
   text-align: center;
   padding: 20px 0;
   margin-bottom: 30px;
@@ -26,6 +27,44 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.auth-status {
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+
+.account-area {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.account-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.account-menu {
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  min-width: 140px;
+}
+
+.account-menu button {
+  width: 100%;
+  margin: 4px 0;
 }
 
 main {
@@ -164,6 +203,40 @@ button:hover {
   background-color: #3949ab;
 }
 
+.secondary {
+  background-color: #607d8b;
+}
+
+.secondary:hover {
+  background-color: #546e7a;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+}
+
+.modal-content {
+  background: white;
+  width: min(440px, 92vw);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.modal-actions button {
+  flex: 1;
+}
+
 .message {
   margin-top: 20px;
   padding: 10px;
@@ -190,6 +263,17 @@ button:hover {
 
 .hidden {
   display: none;
+}
+
+@media (max-width: 600px) {
+  .account-area {
+    top: 8px;
+    right: 8px;
+  }
+
+  .account-menu {
+    min-width: 130px;
+  }
 }
 
 footer {
